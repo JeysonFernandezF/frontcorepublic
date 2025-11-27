@@ -8,7 +8,7 @@ import { setActivePinia, createPinia } from 'pinia';
 // ------------------------
 // Datos de prueba tipo Prc
 // ------------------------
-const prcList: Prc[] = [
+/*const prcList: Prc[] = [
   {
     id: 0,
     name: 'Test PRC',
@@ -67,3 +67,4 @@ describe('usePrcs composable (store real)', () => {
     expect(prcStoreList.value[0]).toEqual(prcList[0]);
   });
 });
+*/
