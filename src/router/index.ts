@@ -48,11 +48,6 @@ const router = createRouter({
                     name: 'login-admin',
                     component: ()=> import('@/modules/auth/views/LoginAdministrador.vue'),
                 },
-                {
-                    path: 'register',
-                    name: 'register',
-                    component: ()=> import('@/modules/auth/views/Register.vue'),
-                },
             ]
         },
         //  Not Found
