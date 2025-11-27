@@ -1,0 +1,12 @@
+@use "../global/colors.scss" as colors;
+
+.svg-primary path {
+  stroke:  #{colors.$color-primary};
+  fill:#{colors.$color-primary};
+}
+.svg-secondary path {
+  stroke: #{colors.$color-secondary};
+}
+.svg-white path {
+  stroke: #FFFFFF;
+}

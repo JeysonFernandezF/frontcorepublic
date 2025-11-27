@@ -1,0 +1,47 @@
+.card {
+  width: 100%;
+  border-radius: 15px;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+
+  .add-question{
+    display: flex;
+    gap: 10px;
+  }
+}
+
+
+//Template
+.card-template > :first-child{
+  height: 81px;
+}
+.card-template > *{
+  height: 65px;
+}
+
+.card-template > * ,.card-template > :first-child {
+  display: flex;
+  padding-left: 36px;
+  padding-right: 36px;
+
+
+  > * {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  > input{
+    margin:auto;
+  }
+}
+
+.card-template > :not(:last-child) {
+  border-bottom: 2px solid #DEE2E6;
+}
+
+//PRC

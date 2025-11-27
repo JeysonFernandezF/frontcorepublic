@@ -1,0 +1,51 @@
+@use "../global/colors" as colors;
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.pagination-pages {
+  display: flex;
+  gap: 10px;
+}
+
+.pagination-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #e5e7eb; // Tailwind gray-200
+  color: #1f2937; // gray-800
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: #d1d5db; // gray-300
+    transform: scale(1.05);
+  }
+
+  &.active {
+    background-color: #{colors.$color-primary}; // blue-500
+    color: white;
+    font-weight: 600;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}

@@ -1,0 +1,52 @@
+.main-container{
+  background: #235C78;
+
+  height: 100vh;
+  height: 100dvh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .icon-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 15%;
+    z-index: 1;
+    h1{
+      font-weight:bold;
+      font-size:24px;
+      color:white
+    }
+    h2{
+      font-size: 16px;
+      color: white;
+    }
+    img{
+      width: 380px;
+    }
+  }
+
+  .form-section{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+    border-radius: 20px;
+
+    width: 500px;
+    height: 575px;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    padding: min(5rem, 5%);
+
+    z-index:1
+
+  }
+}

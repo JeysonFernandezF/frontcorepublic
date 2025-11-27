@@ -1,0 +1,37 @@
+@use "../global/colors" as colors;
+
+.input-layout{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.input{
+  height: 50px;
+  padding: 0px 25px;
+
+  border: 1px solid #D9E1EC;
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.input:focus{
+  border: 1px solid #{colors.$color-primary};
+  outline: none;
+}
+
+.input:disabled{
+  color: #D9E1EC;
+}
+.input-error{
+  border: 1px solid #e53505;
+}
+
+.text-error{
+  color: #e53505;
+}
+

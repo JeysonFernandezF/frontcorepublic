@@ -1,0 +1,75 @@
+@use "../global/colors" as colors;
+
+.button{
+  border-radius: 8px;
+
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+  transition:0.1s ease-in-out;
+
+
+}
+
+.button-login{
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(to right, #0091D9, #235C78);
+}
+.button-login:hover{
+  background: linear-gradient(to right, #0091D9, #235C78);
+}
+
+.button-login:disabled{
+  background: #{colors.$color-disabled};
+}
+
+.button-secondary{
+  background-color: #{colors.$color-secondary};
+}
+.button-secondary:hover{
+  background-color: #{colors.$color-secondary-hover};
+
+}
+
+.button-primary{
+  background: linear-gradient(to right, #0091D9, #235C78);
+
+}
+
+.button-primary:disabled{
+  background: #{colors.$color-disabled};
+}
+
+.button-optional{
+  background:#0091D9;
+
+}
+
+.button-optional:disabled{
+  background-color: #{colors.$color-disabled};
+}
+
+
+.button-error{
+  background-color: #FF0000;
+}
+
+.button-cancel{
+  background-color: transparent;
+  border: 1px solid #505050;
+  color:#505050
+}
+
+.button-sm {
+  height: 36px;
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button-md{
+  height: 48px;
+  width: 189px;
+}
+

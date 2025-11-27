@@ -1,0 +1,74 @@
+@use "../global/colors" as colors;
+
+$switch-width: 35px;
+$switch-height: 18px;
+$slider-color-off: #EFEFEF;
+$slider-color-on: rgba(218, 137, 56, 0.1);
+$slider-transition-duration: 0.4s;
+$handle-size: 17px;
+$handle-color: #{colors.$color-secondary};
+$handle-off: #CCCCCC;
+
+@mixin transition($property) {
+  transition: $property $slider-transition-duration;
+}
+
+.switch-container {
+  position: relative;
+  display: inline-block;
+  width: $switch-width;
+  height: $switch-height;
+
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $slider-color-off;
+
+    border: 1.2px solid $handle-off;
+    @include transition(background-color);
+
+    &.round {
+      border-radius: $switch-height;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: $handle-size;
+      width: $handle-size ;
+      bottom: 0px;
+
+      border-radius: 100%;
+      background-color:  $handle-off;
+      @include transition(transform);
+
+      .round & {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  input:checked + .slider {
+    background-color: $slider-color-on;
+    border: 1.2px solid $handle-color;
+    &:before {
+      transform: translateX(17px);
+      background-color: $handle-color;
+    }
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px $slider-color-on;
+  }
+}
