@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type Section } from '@/types/template/template';
 
-const props = defineProps<{
+defineProps<{
   section: Section,
 }>();
 </script>

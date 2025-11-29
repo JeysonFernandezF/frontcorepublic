@@ -7,6 +7,7 @@ import { userMapper, type User } from '@/types/auth/user';
 
 import { jwtDecode } from 'jwt-decode';
 import { ROLES } from '@/utils/enums/Roles';
+import { fetchMe } from '@/utils/api/auth.service';
 
 export function useAuth() {
 
@@ -19,16 +20,9 @@ export function useAuth() {
 
   const me = async() => {
     try{
-
       const token = localStorage.getItem('token');
 
-      const response = await fetch(`${API_URL}/auth/me`,{
-        method:'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          "Authorization": `Bearer ${token}`
-        },
-      });
+      const response = await fetchMe(token);
 
       if(response.status != 200) {
         const errData = await response.json()
