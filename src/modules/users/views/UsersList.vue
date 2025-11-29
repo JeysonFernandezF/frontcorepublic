@@ -21,6 +21,7 @@ const {showToast} = useToast();
 const {userList, pagination,prevPage, nextPage, otherPage, loading, getUsers} = useUsers();
 const {roleList,loading: changeLoading, loadingConfirm, getRoles, handleRoleChange} = useChangeRole();
 const {openModal, closeModal, isModalOpen } = useModal();
+
 const {user} = useMyUser();
 
 onMounted(()=> {getUsers(); getRoles()})

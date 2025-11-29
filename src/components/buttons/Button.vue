@@ -2,10 +2,6 @@
 import '@/assets/styles/global/buttons.scss'
 
 import { computed, type PropType } from 'vue';
-
-
-
-
 const props = defineProps({
   type:{
     type:String,

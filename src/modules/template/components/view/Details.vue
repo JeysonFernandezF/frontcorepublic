@@ -2,7 +2,7 @@
 import '@/assets/styles/global/card.scss'
 import type { Template } from '@/types/template/template';
 
-const props = defineProps<{
+defineProps<{
   template: Template
 }>();
 

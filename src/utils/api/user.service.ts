@@ -11,8 +11,6 @@ export const fetchUserList = async (page:number = 1): Promise<ResponsePagination
   if (!response.ok) {
     throw new Error("Error al obtener usuarios");
   }
-
-
   return await response.json();
 };
 
